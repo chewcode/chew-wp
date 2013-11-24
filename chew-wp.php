@@ -2,14 +2,15 @@
 /*
 Plugin Name: Chew - Video Embed Shortcode
 Plugin URI: http://chew.tv/chew-wp
-Description: Chew is a Live and VOD platform for Artists, DJs and Labels. Embed Chew.tv videos into your wordpress site using the short tag [chew video="UX7NNO5DHUG2" height="500px" width="300px" autoplay="yes"]
-Version: 0.1.3
+Description: Chew is a Live and VOD platform for Artists, DJs and Labels. With this plugin you can embed Chew videos into Wordpress with one simple shortcode. [chew video="UX7NNO5DHUG2" height="500px" width="300px" autoplay="yes"]
+Version: 0.2
 Author: Ben Bowler
 Author URI: http://chew.tv
 */
 
 /*
-Chew Embed Shortcode Paul McKnight at http://www.reallyeffective.co.uk
+Chew Embed Shortcode by Ben Bowler
+Based on the demo by Paul McKnight at http://www.reallyeffective.co.uk
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
