@@ -32,13 +32,23 @@ add_shortcode("chew", "chew_player");
 function chew_player($atts) {
 	extract( shortcode_atts( array( // Array of defaults
 		'video' => '',
+		'live_event' => '',
+		'channel' => '',
 		'width' => '600px',
 		'height' => '400px',
 		'autoplay' => 'no',
 	), $atts ) );
 
-	//process plugin
-	$demolp_output = "<iframe src=\"http://chew.tv/embed/?video={$video}&autoplay={$autoplay}\" height=\"{$height}\" width=\"{$width}\" allowfullscreen=\"\" frameborder=\"0\"></iframe>";
+	// Create embed code
+	if($video != '') {
+		$output = "<iframe src=\"http://chew.tv/embed/video/{$video}?autoplay={$autoplay}\" height=\"{$height}\" width=\"{$width}\" allowfullscreen=\"\" frameborder=\"0\"></iframe>";
+	} elseif($live_event != '') {
+		$output = "<iframe src=\"http://chew.tv/embed/live_event/{$live_event}?autoplay={$autoplay}\" height=\"{$height}\" width=\"{$width}\" allowfullscreen=\"\" frameborder=\"0\"></iframe>";
+	} elseif($channel != '') {
+		$output = "<iframe src=\"http://chew.tv/embed/channel/{$channel}?autoplay={$autoplay}\" height=\"{$height}\" width=\"{$width}\" allowfullscreen=\"\" frameborder=\"0\"></iframe>";
+	} else {
+		$output = "<strong>Chew Embed Plugin Error: video, live_event or channel must be specified</strong>";
+	}
 	//send back text to calling function
-	return $demolp_output;
+	return $output;
 }
