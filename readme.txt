@@ -30,7 +30,7 @@ To install the plugin simply
 == Changelog ==
 
 = 0.4 =
-* Fixed code when embed is used
+* Fixed code when autoplay is used
 
 = 0.3 =
 * Added support for live events and channels
