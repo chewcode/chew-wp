@@ -2,7 +2,7 @@
 Contributors: benbowler
 Tags: chew, chew.tv, video, embed, music, live streaming
 Requires at least: 3.0.1
-Tested up to: 3.7.1
+Tested up to: 3.8.1
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,7 +29,13 @@ To install the plugin simply
 
 == Changelog ==
 
-= 0.1 =
+= 0.4 =
+* Fixed code when embed is used
+
+= 0.3 =
+* Added support for live events and channels
+
+= 0.2 =
 * Submitted to Wordpress.org
 
 

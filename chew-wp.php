@@ -2,7 +2,7 @@
 /*
 Plugin Name: Chew - Video Embed Shortcode
 Plugin URI: http://chew.tv/chew-wp
-Description: Chew is a Live and VOD platform for Artists, DJs and Labels. With this plugin you can embed Chew videos into Wordpress with one simple shortcode. [chew video="XXXXXXXXXX" height="500px" width="300px" autoplay="yes"]
+Description: Chew is a Live and VOD platform for Artists, DJs and Labels. With this plugin you can embed Chew videos, live_events and channels into Wordpress with one simple shortcode. eg. [chew video="XXXXXXXXXX"height="500px" width="300px" autoplay="yes"] To embed live events or channels switch video="XXXXXXXXX" with either: live_event="XXXXXXXXXX" channel="channelname".
 Version: 0.3
 Author: Ben Bowler
 Author URI: http://chew.tv
@@ -41,11 +41,11 @@ function chew_player($atts) {
 
 	// Create embed code
 	if($video != '') {
-		$output = "<iframe src=\"http://chew.tv/embed/video/{$video}?autoplay={$autoplay}\" height=\"{$height}\" width=\"{$width}\" allowfullscreen=\"\" frameborder=\"0\"></iframe>";
+		$output = "<iframe src=\"http://chew.tv/embed/video/{$video}/?autoplay={$autoplay}\" height=\"{$height}\" width=\"{$width}\" allowfullscreen=\"\" frameborder=\"0\"></iframe>";
 	} elseif($live_event != '') {
-		$output = "<iframe src=\"http://chew.tv/embed/live_event/{$live_event}?autoplay={$autoplay}\" height=\"{$height}\" width=\"{$width}\" allowfullscreen=\"\" frameborder=\"0\"></iframe>";
+		$output = "<iframe src=\"http://chew.tv/embed/live_event/{$live_event}/?autoplay={$autoplay}\" height=\"{$height}\" width=\"{$width}\" allowfullscreen=\"\" frameborder=\"0\"></iframe>";
 	} elseif($channel != '') {
-		$output = "<iframe src=\"http://chew.tv/embed/channel/{$channel}?autoplay={$autoplay}\" height=\"{$height}\" width=\"{$width}\" allowfullscreen=\"\" frameborder=\"0\"></iframe>";
+		$output = "<iframe src=\"http://chew.tv/embed/channel/{$channel}/?autoplay={$autoplay}\" height=\"{$height}\" width=\"{$width}\" allowfullscreen=\"\" frameborder=\"0\"></iframe>";
 	} else {
 		$output = "<strong>Chew Embed Plugin Error: video, live_event or channel must be specified</strong>";
 	}
